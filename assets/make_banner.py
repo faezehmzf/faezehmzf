@@ -30,11 +30,11 @@ THEMES = {
     },
 }
 
-TAGLINE = "NLP  ·  Information Retrieval  ·  Network Science"
+TAGLINE = "Social Network Analysis  ·  Graph Neural Networks  ·  Data Mining"
 LINES = [
-    "text   →  tokens    →  vectors",
-    "query  →  retrieve  →  rank",
-    "graph  →  communities  →  influence",
+    "graph  →  communities  →  evolution",
+    "nodes + text + time  →  GNN embeddings",
+    "data   →  patterns  →  insight",
 ]
 
 

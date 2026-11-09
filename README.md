@@ -1,26 +1,26 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img width="100%" alt="Faezeh Mozaffari — NLP, Information Retrieval, Network Science" src="assets/banner-light.svg">
+  <img width="100%" alt="Faezeh Mozaffari — Social Network Analysis, Graph Neural Networks, Data Mining" src="assets/banner-light.svg">
 </picture>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/faezeh-mozaffari-7816b6230/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:faezeh.m7899@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="mailto:faezehxmozaffari@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
   <!-- <a href="https://faezehmzf.github.io/"><img src="https://img.shields.io/badge/Portfolio-111827?style=flat-square&logo=githubpages&logoColor=white" alt="Portfolio"></a> -->
-  <!-- <a href="LINK_TO_CV.pdf"><img src="https://img.shields.io/badge/CV-7C3AED?style=flat-square&logo=readthedocs&logoColor=white" alt="CV"></a> -->
 </p>
 
 <sub><i>The banner is a small network: node size is PageRank, colours are communities, and the moving dot is a random surfer.</i></sub>
 
 ### Hi, I'm Faezeh
 
-I hold an MSc in IT Engineering from the **University of Tehran**. I work on how machines read text, find what matters in it, and follow how ideas spread between people:
+I hold an MSc in IT Engineering from the **University of Tehran** and am a research assistant in its **Social Networks Lab**. I study graphs and social networks: how communities form and change over time, which accounts drive the spread of information, and how graph neural networks can learn from network structure, text and time together.
 
-- **Language** — tokenizers, word vectors, sequence labelling, translation, and fine-tuning transformers.
-- **Retrieval & ranking** — search models, learning to rank, and retrieval-augmented chatbots.
-- **Networks** — link analysis, community detection, and information diffusion on social platforms.
+My thesis models **the evolution of communities in dynamic, multi-relational social networks**. It is an unsupervised framework that combines GraphSAGE, masked attention, a GRU and transformer text embeddings to find communities in large networks and track them as they grow, split and merge.
 
-I like to build methods from scratch once, check them against a reference, and then measure them honestly.
+- **Social network analysis** — community detection, centrality and influence, information diffusion
+- **Graph learning** — graph neural networks, dynamic and multi-relational graphs, knowledge graphs
+- **Data mining & machine learning** — classification, clustering, ranking, statistical analysis
+- **Natural language processing** — text representations, transformers, LLM applications
 
 ---
 
@@ -31,17 +31,19 @@ I like to build methods from scratch once, check them against a reference, and t
 <td width="50%" valign="top">
 
 **💬 [RAG chatbot over a textbook](https://github.com/faezehmzf/slp3-rag-chatbot-langgraph)**<br>
-Answers questions about *Speech and Language Processing*: an LLM router, hybrid FAISS + BM25 retrieval, web search and a fallback for off-topic questions, built with LangGraph.<br>
+**Goal:** answer questions about an NLP textbook from the book itself, and know when to search the web or decline instead of guessing.<br>
+An LLM router picks between hybrid FAISS + BM25 search over the book, web search and a fallback, built with LangGraph.<br>
 <kbd>6 / 6 routed correctly</kbd> in a live run with Llama-3-70B<br>
-<sub>`RAG` `LangGraph` `FAISS` `BM25`</sub>
+<sub>`RAG` `LangGraph` `LLMs`</sub>
 
 </td>
 <td width="50%" valign="top">
 
 **🔎 [Job–candidate ranking](https://github.com/faezehmzf/job-candidate-ranking)**<br>
-Learning to rank applicants for jobs: cleaning, 51 job–candidate features, grouped cross-validation, LightGBM and XGBoost rankers.<br>
+**Goal:** rank each job's applicants so that the best-fitting candidates come first.<br>
+Data cleaning, 51 job–candidate features, cross-validation grouped by job, and LightGBM and XGBoost ranking models.<br>
 <kbd>NDCG@10 0.858</kbd> vs. 0.424 without feature engineering<br>
-<sub>`learning-to-rank` `LightGBM` `XGBoost`</sub>
+<sub>`data-mining` `learning-to-rank` `LightGBM`</sub>
 
 </td>
 </tr>
@@ -49,15 +51,17 @@ Learning to rank applicants for jobs: cleaning, 51 job–candidate features, gro
 <td width="50%" valign="top">
 
 **🏷️ [Semantic role labelling: tagging vs. generation](https://github.com/faezehmzf/srl-tagging-vs-generation)**<br>
-The same task solved two ways: BIO tagging (BiLSTM-CRF, RoBERTa) and question-answer generation (seq2seq, FLAN-T5).<br>
-<kbd>span F1 0.529 → 0.880</kbd> from BiLSTM to RoBERTa + CRF<br>
+**Goal:** find out whether "who did what to whom" is better extracted by tagging words or by generating answers to questions.<br>
+BiLSTM-CRF and RoBERTa taggers against seq2seq and FLAN-T5 generators, compared with one metric.<br>
+<kbd>span F1 0.880</kbd> with RoBERTa + CRF; FLAN-T5 is close behind<br>
 <sub>`NLP` `PyTorch` `Transformers`</sub>
 
 </td>
 <td width="50%" valign="top">
 
 **⚡ [Parameter-efficient fine-tuning](https://github.com/faezehmzf/roberta-peft-mnli)**<br>
-Full fine-tuning vs. LoRA vs. soft prompts on RoBERTa-large for natural language inference (MultiNLI).<br>
+**Goal:** test how close cheap fine-tuning methods get to full fine-tuning when only a small part of a large model is trained.<br>
+Full fine-tuning, LoRA and soft prompts on RoBERTa-large for natural language inference (MultiNLI).<br>
 <kbd>LoRA 81.6%</kbd> training only 1.3% of the weights<br>
 <sub>`PEFT` `LoRA` `RoBERTa`</sub>
 
@@ -71,42 +75,37 @@ Full fine-tuning vs. LoRA vs. soft prompts on RoBERTa-large for natural language
 
 | Area | Project | In one line |
 |---|---|---|
-| Retrieval | [bm25-vs-language-models](https://github.com/faezehmzf/bm25-vs-language-models) | BM25, PL2 and query-likelihood models with EM feedback, cross-validated with significance tests |
-| Retrieval | [graph-ranking-and-text-weighting](https://github.com/faezehmzf/graph-ranking-and-text-weighting) | PageRank, HITS and SALSA checked against NetworkX; TF-IDF as a MapReduce job |
-| Language | [tokenizers-and-ngram-lms](https://github.com/faezehmzf/tokenizers-and-ngram-lms) | BPE, WordPiece and Kneser-Ney language models, tested against Hugging Face |
-| Language | [tfidf-ppmi-word2vec](https://github.com/faezehmzf/tfidf-ppmi-word2vec) | Sparse counts, PPMI and skip-gram vectors compared with GloVe |
-| Language | [english-persian-nmt-fairseq](https://github.com/faezehmzf/english-persian-nmt-fairseq) | English→Persian translation with fairseq: LSTM vs. Transformer |
-| Speech | [spoken-language-identification](https://github.com/faezehmzf/spoken-language-identification) | Four-language identification from speech, evaluated on narrators the model has never heard |
-| Networks | [information-diffusion-network-analysis](https://github.com/faezehmzf/information-diffusion-network-analysis) | Influence (HITS, PageRank), k-cores and communities (Louvain, Infomap) in six retweet and forward networks |
-| ML | [life-expectancy-mlp](https://github.com/faezehmzf/life-expectancy-mlp) | MLPs on WHO indicators, tested on countries the model has never seen |
+| Social networks | [information-diffusion-network-analysis](https://github.com/faezehmzf/information-diffusion-network-analysis) | Influence (HITS, PageRank), k-cores and communities (Louvain, Infomap) in six retweet and forward networks |
+| Graphs | [graph-ranking-and-text-weighting](https://github.com/faezehmzf/graph-ranking-and-text-weighting) | PageRank, HITS and SALSA on a voting network, checked against NetworkX; TF-IDF as a MapReduce job |
+| Data mining | [bm25-vs-language-models](https://github.com/faezehmzf/bm25-vs-language-models) | Eleven text ranking models compared with cross-validation and significance tests |
+| Machine learning | [spoken-language-identification](https://github.com/faezehmzf/spoken-language-identification) | Four-language identification from speech, evaluated on speakers the model has never heard |
+| Machine learning | [life-expectancy-mlp](https://github.com/faezehmzf/life-expectancy-mlp) | Neural networks on WHO indicators, tested on countries the model has never seen |
 | Statistics | [Pima-Diabetes-Stat-Inference](https://github.com/faezehmzf/Pima-Diabetes-Stat-Inference) | Estimation, hypothesis tests and regression on the Pima diabetes data |
+| NLP | [tokenizers-and-ngram-lms](https://github.com/faezehmzf/tokenizers-and-ngram-lms) | Subword tokenizers and n-gram language models, tested against Hugging Face |
+| NLP | [tfidf-ppmi-word2vec](https://github.com/faezehmzf/tfidf-ppmi-word2vec) | Count-based and skip-gram word vectors compared with GloVe |
+| NLP | [english-persian-nmt-fairseq](https://github.com/faezehmzf/english-persian-nmt-fairseq) | English→Persian translation with fairseq: LSTM vs. Transformer |
 | Optimisation | [Bio-CPG-Optimization](https://github.com/faezehmzf/Bio-CPG-Optimization) | A genetic algorithm that tunes a walking gait for a six-legged robot in Webots |
 
 </details>
 
 ---
 
-### How I work
-
-- 🧪 **Check against a reference.** My from-scratch BPE matches Hugging Face on 92.7% of unseen words; my PageRank and TF-IDF are tested against NetworkX and scikit-learn.
-- 🧱 **Split by what must generalise.** Countries the model never saw, job groups kept apart in cross-validation — so the score means what it says.
-- 📏 **Always show the baseline.** Every result sits next to a random or simple baseline, over several seeds when the gap is small.
-- ✅ **Tests and CI.** My recent repositories come with tests that run on GitHub Actions.
-
----
-
 ### Toolbox
 
 <p>
-  <img src="https://skillicons.dev/icons?i=py,pytorch,sklearn,git,github,githubactions,linux,latex&perline=8" alt="Python, PyTorch, scikit-learn, Git, GitHub, GitHub Actions, Linux, LaTeX">
+  <img src="https://skillicons.dev/icons?i=py,cpp,c,matlab,mysql,pytorch,tensorflow,sklearn,django,git,github,latex&perline=12" alt="Python, C++, C, MATLAB, MySQL, PyTorch, TensorFlow, scikit-learn, Django, Git, GitHub, LaTeX">
 </p>
 
-**NLP** Hugging Face Transformers · PEFT · fairseq · SentencePiece<br>
-**Retrieval & LLMs** LangGraph · FAISS · BM25 · LightGBM / XGBoost rankers<br>
-**Networks & data** NetworkX · Infomap · Gephi · pandas · NumPy · MRJob
+**Graphs & networks** NetworkX · Gephi · Neo4j<br>
+**Machine learning** PyTorch · TensorFlow · scikit-learn · Hugging Face<br>
+**Data** pandas · NumPy · SQL · Tableau<br>
+**LLM applications** LangChain · LangGraph<br>
+**Software** Python · C++ · Django · Git
+
+**Languages** English (fluent) · Korean (intermediate) · Persian (native)
 
 ---
 
 <p align="center">
-  <sub>Happy to talk about NLP, search and ranking, or social networks — <a href="https://www.linkedin.com/in/faezeh-mozaffari-7816b6230/">LinkedIn</a> · <a href="mailto:faezeh.m7899@gmail.com">email</a></sub>
+  <sub>Happy to talk about social networks, graph learning or data mining — <a href="https://www.linkedin.com/in/faezeh-mozaffari-7816b6230/">LinkedIn</a> · <a href="mailto:faezehxmozaffari@gmail.com">email</a></sub>
 </p>
