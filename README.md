@@ -14,7 +14,7 @@
 
 ### Hi, I'm Faezeh
 
-I'm an MSc student in IT Engineering at the **University of Tehran**. I work on how machines read text, find what matters in it, and follow how ideas spread between people:
+I hold an MSc in IT Engineering from the **University of Tehran**. I work on how machines read text, find what matters in it, and follow how ideas spread between people:
 
 - **Language** — tokenizers, word vectors, sequence labelling, translation, and fine-tuning transformers.
 - **Retrieval & ranking** — search models, learning to rank, and retrieval-augmented chatbots.
