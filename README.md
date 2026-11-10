@@ -8,11 +8,11 @@
 
 ### Hi, I'm Faezeh
 
-I hold an MSc in Information Technology Engineering from the **University of Tehran**, where I am also a Research Assistant at the **Social Networks Lab**. Our lab investigates computational approaches to understanding social networks, integrating **Network Science**, **Machine Learning**, and **Natural Language Processing** to study online behavior and information dynamics.
+🎓 I hold an MSc in Information Technology Engineering from the **University of Tehran**, where I am also a Research Assistant at the **Social Networks Lab**. Our lab investigates computational approaches to understanding social networks, integrating **Network Science**, **Machine Learning**, and **Natural Language Processing** to study online behavior and information dynamics.
 
-My research lies at the intersection of **Network Science and Machine Learning**, with a particular focus on **Community Detection and Evolution**, **Influence Analysis**, and **Information Diffusion** in large-scale social networks.
+🔬 My research lies at the intersection of **Network Science and Machine Learning**, with a particular focus on **Community Detection and Evolution**, **Influence Analysis**, and **Information Diffusion** in large-scale social networks.
 
-My broader research interests encompass **Graph Machine Learning and Representation Learning**, with an emphasis on modeling complex relational structures, capturing structural and temporal dependencies, and learning generalizable representations. Building on my experience with **Graph Neural Networks**, I am particularly interested in developing robust and scalable learning approaches for complex, structured, and evolving data across diverse domains.
+🚀 My broader research interests encompass **Graph Machine Learning and Representation Learning**, with an emphasis on modeling complex relational structures, capturing structural and temporal dependencies, and learning generalizable representations. Building on my experience with **Graph Neural Networks**, I am particularly interested in developing robust and scalable learning approaches for complex, structured, and evolving data across diverse domains.
 
 ---
 
