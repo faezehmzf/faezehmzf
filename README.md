@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img width="100%" alt="Faezeh Mozaffari — Social Network Analysis, Graph Neural Networks, Data Mining" src="assets/banner-light.svg">
-</picture>
+<img width="100%" alt="Faezeh Mozaffari" src="assets/banner.webp">
 
 <p align="center">
   <a href="https://www.linkedin.com/in/faezeh-mozaffari-7816b6230/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -9,18 +6,13 @@
   <!-- <a href="https://faezehmzf.github.io/"><img src="https://img.shields.io/badge/Portfolio-111827?style=flat-square&logo=githubpages&logoColor=white" alt="Portfolio"></a> -->
 </p>
 
-<sub><i>The banner is a small network: node size is PageRank, colours are communities, and the moving dot is a random surfer.</i></sub>
-
 ### Hi, I'm Faezeh
 
-I hold an MSc in IT Engineering from the **University of Tehran** and am a research assistant in its **Social Networks Lab**. I study graphs and social networks: how communities form and change over time, which accounts drive the spread of information, and how graph neural networks can learn from network structure, text and time together.
+I hold an MSc in Information Technology Engineering from the **University of Tehran**, where I am also a Research Assistant at the **Social Networks Lab**. Our lab investigates computational approaches to understanding social networks, integrating **Network Science**, **Machine Learning**, and **Natural Language Processing** to study online behavior and information dynamics.
 
-My thesis models **the evolution of communities in dynamic, multi-relational social networks**. It is an unsupervised framework that combines GraphSAGE, masked attention, a GRU and transformer text embeddings to find communities in large networks and track them as they grow, split and merge.
+My research lies at the intersection of **Network Science and Machine Learning**, with a particular focus on **Community Detection and Evolution**, **Influence Analysis**, and **Information Diffusion** in large-scale social networks.
 
-- **Social network analysis** — community detection, centrality and influence, information diffusion
-- **Graph learning** — graph neural networks, dynamic and multi-relational graphs, knowledge graphs
-- **Data mining & machine learning** — classification, clustering, ranking, statistical analysis
-- **Natural language processing** — text representations, transformers, LLM applications
+My broader research interests encompass **Graph Machine Learning and Representation Learning**, with an emphasis on modeling complex relational structures, capturing structural and temporal dependencies, and learning generalizable representations. Building on my experience with **Graph Neural Networks**, I am particularly interested in developing robust and scalable learning approaches for complex, structured, and evolving data across diverse domains.
 
 ---
 
@@ -30,19 +22,19 @@ My thesis models **the evolution of communities in dynamic, multi-relational soc
 <tr>
 <td width="50%" valign="top">
 
-**💬 [RAG chatbot over a textbook](https://github.com/faezehmzf/slp3-rag-chatbot-langgraph)**<br>
-**Goal:** answer questions about an NLP textbook from the book itself, and know when to search the web or decline instead of guessing.<br>
-An LLM router picks between hybrid FAISS + BM25 search over the book, web search and a fallback, built with LangGraph.<br>
-<kbd>6 / 6 routed correctly</kbd> in a live run with Llama-3-70B<br>
+**💬 [RAG chatbot for *Speech and Language Processing*](https://github.com/faezehmzf/slp3-rag-chatbot-langgraph)**<br>
+**Goal:** a chatbot that answers questions about Jurafsky and Martin's *Speech and Language Processing* textbook from the book itself, and turns to web search or politely declines when the book does not cover the question.<br>
+**Approach:** a LangGraph workflow sends each question to hybrid FAISS + BM25 search over the 640-page book, to web search, or to a fallback.<br>
+**Result:** tested with Llama-3-70B, every test question reached the right source, and the answers stayed within the retrieved passages.<br>
 <sub>`RAG` `LangGraph` `LLMs`</sub>
 
 </td>
 <td width="50%" valign="top">
 
 **🔎 [Job–candidate ranking](https://github.com/faezehmzf/job-candidate-ranking)**<br>
-**Goal:** rank each job's applicants so that the best-fitting candidates come first.<br>
-Data cleaning, 51 job–candidate features, cross-validation grouped by job, and LightGBM and XGBoost ranking models.<br>
-<kbd>NDCG@10 0.858</kbd> vs. 0.424 without feature engineering<br>
+**Goal:** rank the applicants for each job so that the best-fitting candidates come first.<br>
+**Approach:** data cleaning, 51 job–candidate features, cross-validation grouped by job, and LightGBM and XGBoost ranking models.<br>
+**Result:** NDCG@10 of 0.858 on the test set, compared with 0.424 for the same model without the engineered features.<br>
 <sub>`data-mining` `learning-to-rank` `LightGBM`</sub>
 
 </td>
@@ -51,18 +43,18 @@ Data cleaning, 51 job–candidate features, cross-validation grouped by job, and
 <td width="50%" valign="top">
 
 **🏷️ [Semantic role labelling: tagging vs. generation](https://github.com/faezehmzf/srl-tagging-vs-generation)**<br>
-**Goal:** find out whether "who did what to whom" is better extracted by tagging words or by generating answers to questions.<br>
-BiLSTM-CRF and RoBERTa taggers against seq2seq and FLAN-T5 generators, compared with one metric.<br>
-<kbd>span F1 0.880</kbd> with RoBERTa + CRF; FLAN-T5 is close behind<br>
+**Goal:** semantic role labelling finds *who did what to whom* in a sentence. The project asks whether this works better by labelling each word, or by generating the answer to a question such as *"who accepted the offer?"*<br>
+**Approach:** two taggers (BiLSTM-CRF, RoBERTa) and two generators (an RNN encoder–decoder, FLAN-T5), all scored with the same metric.<br>
+**Result:** RoBERTa with a CRF layer is the strongest model (span F1 0.880). FLAN-T5 comes close (token F1 0.894 vs. 0.902), while the generator trained without pre-training falls far behind.<br>
 <sub>`NLP` `PyTorch` `Transformers`</sub>
 
 </td>
 <td width="50%" valign="top">
 
 **⚡ [Parameter-efficient fine-tuning](https://github.com/faezehmzf/roberta-peft-mnli)**<br>
-**Goal:** test how close cheap fine-tuning methods get to full fine-tuning when only a small part of a large model is trained.<br>
-Full fine-tuning, LoRA and soft prompts on RoBERTa-large for natural language inference (MultiNLI).<br>
-<kbd>LoRA 81.6%</kbd> training only 1.3% of the weights<br>
+**Goal:** measure how much accuracy is lost when, instead of updating all 355M weights of RoBERTa-large, only a small set of added weights is trained.<br>
+**Approach:** full fine-tuning, LoRA and soft prompts on natural language inference (MultiNLI), with 1% of the training data on a single GPU.<br>
+**Result:** LoRA reaches 81.6% while training 1.3% of the weights, but needs three epochs to get there. After one epoch, full fine-tuning is well ahead (74.6% vs. 52.6%), and the soft prompts did not learn.<br>
 <sub>`PEFT` `LoRA` `RoBERTa`</sub>
 
 </td>
@@ -101,8 +93,6 @@ Full fine-tuning, LoRA and soft prompts on RoBERTa-large for natural language in
 **Data** pandas · NumPy · SQL · Tableau<br>
 **LLM applications** LangChain · LangGraph<br>
 **Software** Python · C++ · Django · Git
-
-**Languages** English (fluent) · Korean (intermediate) · Persian (native)
 
 ---
 
